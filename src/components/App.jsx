@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import api from "../api/unsplash";
-import axios from "axios";
 import ImageList from "./ImageList";
 import SearchInput from "./SearchInput";
 
-import json from "../api/sample_response.json";
+// import json from "../api/sample_response.json";
 
 class App extends Component {
   state = {
@@ -15,6 +14,9 @@ class App extends Component {
       params: { query: searchTerm, per_page: 30 },
     });
     this.setState({ images: resp.data.results });
+
+    // for testing
+    // this.setState({ images: json });
   };
 
   render() {
